@@ -1,8 +1,8 @@
 # rekisei
 
-A reusable agent skill for editing a clean **2-page LaTeX resume** by chatting — works with [Claude Code](https://claude.com/claude-code) (`CLAUDE.md`) and [Codex](https://github.com/openai/codex) (`AGENTS.md`).
+A reusable agent skill for editing a **clean, concise LaTeX resume (1–2 pages preferred, 3 max)** by chatting — works with [Claude Code](https://claude.com/claude-code) (`CLAUDE.md`) and [Codex](https://github.com/openai/codex) (`AGENTS.md`).
 
-Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a skill file that teaches the agent how to add projects, update star counts, manage honors, and keep the layout on 2 pages — and a workflow that recompiles + auto-opens the PDF after every edit.
+Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a skill file that teaches the agent how to add projects, update star counts, manage honors, and keep the layout tight — and a workflow that recompiles + auto-opens the PDF after every edit.
 
 ## Quick start
 
