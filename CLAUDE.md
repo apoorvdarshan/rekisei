@@ -1,10 +1,10 @@
 # Resume — CLAUDE.md skill
 
-Drop this folder into Claude Code (or any Claude agent) to get a live LaTeX resume editor: edit by chatting, recompile + auto-open the PDF on every change, keep the layout clean and 2 pages.
+Drop this folder into Claude Code (or any Claude agent) to get a live LaTeX resume editor: edit by chatting, recompile + auto-open the PDF on every change, keep the layout clean and concise — 1–2 pages preferred, 3 max.
 
 ## Files
 - `resume.tex` — main LaTeX source (sample template, customize freely)
-- `resume.pdf` — compiled output (target: 2 pages)
+- `resume.pdf` — compiled output (1–2 pages preferred, 3 max)
 - `CLAUDE.local.md` — *optional* private personal data (gitignored). Put your real name, contact, projects, honors here so `CLAUDE.md` and `resume.tex` can stay clean of personal info if you fork this repo. Claude Code reads it automatically alongside `CLAUDE.md`.
 
 ## How to compile
@@ -34,7 +34,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Header link: `\href{URL}{\underline{Label}}`
 
 ## Constraints
-- Stay 2 pages. If it grows: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`
+- Aim for 1–2 pages; 3 is acceptable if you genuinely have the content. Don't pad. If it overflows past 3: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If it's 1 page, leave it — concise wins.
 - Section headers use `\scshape` (no bold available in OT1/cmr)
 - FontAwesome5 not assumed — `\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{}` for safe fallback; header uses plain text labels
 - ATS-parseable: `\pdfgentounicode=1`
@@ -45,7 +45,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Update a star count**: find `$\bigstar$ Xk stars` in the relevant line
 - **Add an honor**: add a `\textbf{Title} -- description & Date \\[0pt]` row to the Honors table
 - **Recompile after every change**: `pdflatex resume.tex && open resume.pdf`
-- **Resume is 3 pages**: tighten `\vspace` in `\resumeProjectHeading` or reduce row spacing in honors
+- **Resume overflows past 3 pages**: tighten `\vspace` in `\resumeProjectHeading` or reduce row spacing in honors. (3 pages is fine; 4+ is too long.)
 
 ## Workflow notes (for Claude)
 - After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
