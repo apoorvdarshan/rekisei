@@ -1,11 +1,10 @@
 # Resume — CLAUDE.md skill
 
-Drop this folder into Claude Code (or any Claude agent) to get a live LaTeX resume editor: edit by chatting, recompile + auto-open the PDF on every change, keep the layout clean and concise — 1–2 pages preferred, 3 max.
+Drop this folder into Claude Code (or any Claude agent) to get a live LaTeX resume editor: edit by chatting, recompile + auto-open the PDF on every change, keep the layout clean and concise — 1–2 pages preferred.
 
 ## Files
 - `resume.tex` — main LaTeX source (sample template, customize freely)
-- `resume.pdf` — compiled output (1–2 pages preferred, 3 max)
-- `CLAUDE.local.md` — *optional* private personal data (gitignored). Put your real name, contact, projects, honors here so `CLAUDE.md` and `resume.tex` can stay clean of personal info if you fork this repo. Claude Code reads it automatically alongside `CLAUDE.md`.
+- `resume.pdf` — compiled output (1–2 pages preferred; user's call)
 
 ## How to compile
 ```bash
@@ -34,7 +33,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Header link: `\href{URL}{\underline{Label}}`
 
 ## Constraints
-- Aim for 1–2 pages; 3 is acceptable if you genuinely have the content. Don't pad. If it overflows past 3: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If it's 1 page, leave it — concise wins.
+- 1–2 pages is the recommended sweet spot, but length is the user's call — don't enforce a cap. If the user wants to tighten the layout: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If they want it to breathe more: loosen those values.
 - Section headers use `\scshape` (no bold available in OT1/cmr)
 - FontAwesome5 not assumed — `\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{}` for safe fallback; header uses plain text labels
 - ATS-parseable: `\pdfgentounicode=1`
@@ -45,12 +44,13 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Update a star count**: find `$\bigstar$ Xk stars` in the relevant line
 - **Add an honor**: add a `\textbf{Title} -- description & Date \\[0pt]` row to the Honors table
 - **Recompile after every change**: `pdflatex resume.tex && open resume.pdf`
-- **Resume overflows past 3 pages**: tighten `\vspace` in `\resumeProjectHeading` or reduce row spacing in honors. (3 pages is fine; 4+ is too long.)
+- **Tighten the layout** (user wants it shorter): reduce `\vspace` in `\resumeProjectHeading` or row spacing in honors
 
 ## Workflow notes (for Claude)
 - After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
 - After any structural/formatting change, update this `CLAUDE.md` to keep it accurate.
-- If `CLAUDE.local.md` exists, treat it as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting updates, and write personal-only changes there rather than into `CLAUDE.md`.
+- Treat `resume.tex` as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting changes.
+- The structure, sections, page count, and formatting above are **recommendations, not rules**. If the user explicitly asks to change the template (drop a section, add one, reorder, switch color theme, ditch the Jake's Resume base entirely, target 3+ pages, etc.) — do it. Their resume, their call.
 
 ## Credits
 LaTeX base: [Jake's Resume](https://github.com/jakegut/resume) (MIT).
