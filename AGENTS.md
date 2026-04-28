@@ -31,6 +31,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Closed source: `\textnormal{(closed source) -- description}`
 - Honors row: `\textbf{Title} -- description & Date \\[0pt]`
 - Header link: `\href{URL}{\underline{Label}}`
+- **Clickable project / open-source name** (optional): wrap the name in `\href{URL}{}` inside the existing `\textbf{}` — e.g. `\textbf{\href{https://github.com/you/repo}{repo}}`. `hyperref` is loaded with `hidelinks`, so the text looks identical in the PDF but is clickable. Use repo URLs for projects, merged-PR URLs for open-source contributions. If the user wants every project clickable, batch it — don't ask one-by-one.
 
 ## Constraints
 - 1–2 pages is the recommended sweet spot, but length is the user's call — don't enforce a cap. If the user wants to tighten the layout: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If they want it to breathe more: loosen those values.
@@ -43,6 +44,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Add a project**: copy a `\resumeProjectHeading` line into Projects
 - **Update a star count**: find `$\bigstar$ Xk stars` in the relevant line
 - **Add an honor**: add a `\textbf{Title} -- description & Date \\[0pt]` row to the Honors table
+- **Make project / OSS names clickable**: wrap each name in `\href{URL}{}` inside `\textbf{}`. Project names → repo URL; open-source contributions → merged PR URL. For repos with multiple merged PRs, link to `https://github.com/owner/repo/pulls?q=author%3A<username>` so all show up.
 - **Recompile after every change**: `pdflatex resume.tex && open resume.pdf`
 - **Tighten the layout** (user wants it shorter): reduce `\vspace` in `\resumeProjectHeading` or row spacing in honors
 
