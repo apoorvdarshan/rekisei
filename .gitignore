@@ -1,0 +1,21 @@
+# Personal resume files (keep your real resume out of the public template repo)
+Apoorv_Darshan_Resume.*
+CLAUDE.local.md
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+missfont.log
+
+# OS junk
+.DS_Store
+Thumbs.db
