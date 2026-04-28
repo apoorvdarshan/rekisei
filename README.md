@@ -1,6 +1,6 @@
 # rekisei
 
-A reusable agent skill for editing a **clean, concise LaTeX resume (1–2 pages preferred, 3 max)** by chatting — works with [Claude Code](https://claude.com/claude-code) (`CLAUDE.md`) and [Codex](https://github.com/openai/codex) (`AGENTS.md`).
+A reusable agent skill for editing a **clean, concise LaTeX resume (1–2 pages preferred — your call)** by chatting — works with [Claude Code](https://claude.com/claude-code) (`CLAUDE.md`) and [Codex](https://github.com/openai/codex) (`AGENTS.md`).
 
 Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a skill file that teaches the agent how to add projects, update star counts, manage honors, and keep the layout tight — and a workflow that recompiles + auto-opens the PDF after every edit.
 
@@ -19,22 +19,20 @@ Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a ski
    sudo tlmgr install enumitem titlesec marvosym preprint cm-super collection-fontsrecommended
    ```
 
-3. *(Optional but recommended)* Create `CLAUDE.local.md` (for Claude Code) or `AGENTS.local.md` (for Codex) with your private personal data — name, projects, honors, contact. Both are gitignored. Each agent reads its own `*.local.md` automatically alongside the skill file.
-
-4. Open the folder in your agent of choice:
+3. Open the folder in your agent of choice:
    ```bash
    claude   # Claude Code
    # or
    codex    # OpenAI Codex CLI
    ```
 
-5. Ask the agent to customize `resume.tex` for you — *"replace the placeholders with the info from my .local.md"* — or just edit `resume.tex` directly. After every change the agent will recompile and open the rendered PDF.
+4. Edit `resume.tex` directly, or chat with the agent — *"replace the placeholders with my info: name X, email Y, projects A/B/C..."*. After every change the agent will recompile and open the rendered PDF.
 
 ## What's in the box
 - **`CLAUDE.md`** / **`AGENTS.md`** — the skill: instructions for the agent on file structure, formatting patterns, common tasks, and workflow. Same content, two filenames so both agents pick it up.
 - **`resume.tex`** — sample template with placeholder content. Customize freely.
 - **`resume.pdf`** — compiled sample output.
-- **`.gitignore`** — keeps your personal `CLAUDE.local.md` / `AGENTS.local.md` and personal-named resume files out of git if you fork this.
+- **`.gitignore`** — keeps personal-named resume files (e.g. `Your_Name_Resume.tex`) out of git if you fork this.
 
 ## Why "rekisei"?
 歴世 — a Japanese word meaning *"successive generations"* / *"the passage of years"* — what a resume captures.
