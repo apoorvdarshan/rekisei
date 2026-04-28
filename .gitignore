@@ -1,6 +1,7 @@
 # Personal resume files (keep your real resume out of the public template repo)
 Apoorv_Darshan_Resume.*
 CLAUDE.local.md
+AGENTS.local.md
 
 # LaTeX build artifacts
 *.aux
