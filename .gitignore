@@ -1,6 +1,10 @@
 # Personal resume files (keep your real resume out of the public template repo)
 Apoorv_Darshan_Resume.*
 
+# Personal outreach logs (contacted founders/leads — keep private)
+outreach-sent.md
+outreach-*.md
+
 # LaTeX build artifacts
 *.aux
 *.log
