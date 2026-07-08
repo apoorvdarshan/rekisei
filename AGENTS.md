@@ -50,6 +50,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 
 ## Workflow notes (for the agent)
 - After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
+- After compiling, sync **both** the `.tex` source and the compiled `.pdf` to `~/Documents/` so the canonical current resume — source *and* output — always lives there. Keep the two in sync (recompile, then copy both).
 - After any structural/formatting change, update this `AGENTS.md` to keep it accurate.
 - Treat `resume.tex` as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting changes.
 - The structure, sections, page count, and formatting above are **recommendations, not rules**. If the user explicitly asks to change the template (drop a section, add one, reorder, switch color theme, ditch the Jake's Resume base entirely, target 3+ pages, etc.) — do it. Their resume, their call.
