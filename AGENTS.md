@@ -20,10 +20,11 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 1. **Header** — name + 5–6 link macros (email, website, GitHub, LinkedIn, X, etc.)
 2. **Education** — newest first
 3. **Experience** — newest first, with bullet items via `\resumeItemListStart` / `\resumeItem{...}` / `\resumeItemListEnd`
-4. **Projects** — single merged list of one-liners (no current/legacy split)
-5. **Open Source Contributions** — repos with star counts
-6. **Honors & Awards** — newest first, single table
-7. **Technical Skills** — Languages, Frameworks, Databases & Tools, AI Tools, Platforms
+4. **Product showcases (optional)** — focused sections such as Apps, Games, or Chrome Extensions when the user's portfolio benefits from them
+5. **Projects** — single merged list of one-liners (no current/legacy split)
+6. **Open Source Contributions** — repos with star counts
+7. **Honors & Awards** — newest first, single table
+8. **Technical Skills** — Languages, Frameworks, Databases & Tools, AI Tools, Platforms
 
 ## Key formatting patterns
 - One-line project: `\resumeProjectHeading{\textbf{name} \textnormal{ -- short description}}{}`
