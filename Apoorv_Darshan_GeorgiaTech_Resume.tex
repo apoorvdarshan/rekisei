@@ -1,0 +1,102 @@
+% One-page resume tailored for the Georgia Tech OMSCS application.
+% This is intentionally separate from Apoorv_Darshan_Resume.tex.
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage[english]{babel}
+
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
+
+\pagestyle{empty}
+\raggedright
+\setlength{\tabcolsep}{0pt}
+\setlength{\parindent}{0pt}
+\addtolength{\oddsidemargin}{-0.62in}
+\addtolength{\evensidemargin}{-0.62in}
+\addtolength{\textwidth}{1.24in}
+\addtolength{\topmargin}{-0.66in}
+\addtolength{\textheight}{1.30in}
+
+\titleformat{\section}
+  {\vspace{-2pt}\scshape\raggedright\large}
+  {}{0em}{}[\titlerule\vspace{-5pt}]
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in,nosep,itemsep=1pt,topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItem}[1]{\item\small #1}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProject}[2]{
+  \item\small
+  \textbf{#1} --- #2\vspace{-1pt}
+}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\textbf{Apoorv Darshan}}\\[4pt]
+  \small
+  +91 9770514461 \ $|$ \
+  \href{mailto:ad13dtu@gmail.com}{\underline{ad13dtu@gmail.com}} \ $|$ \
+  \href{https://github.com/apoorvdarshan}{\underline{github.com/apoorvdarshan}}
+\end{center}
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {University of the People}{Jun 2025 -- Jun 2026}
+    {Bachelor of Science in Computer Science; GPA: 3.77/4.00, Magna Cum Laude}{Pasadena, CA, USA}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Full Stack Developer Intern}{Nov 2025 -- Feb 2026}
+    {XIRCLS}{Remote}
+  \resumeItemListStart
+    \resumeItem{Built end-to-end CRM features for leads, accounts, authentication, reminders, and interactions using React, React Query, REST APIs, and database-backed services.}
+    \resumeItem{Resolved schema, UUID, authorization, and session-cache issues; strengthened ownership validation and data integrity across frontend and backend flows.}
+    \resumeItem{Led task coordination and code review for five interns while improving pagination, filtering, soft-delete/restore, validation, and real-time interface updates.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Selected Projects and Open Source}
+\resumeSubHeadingListStart
+  \resumeProject{\href{https://github.com/apoorvdarshan/fud-ai}{fud-ai} $|$ 269 GitHub stars, 4K+ downloads}{AI-powered calorie and nutrition tracker released for mobile platforms.}
+  \resumeProject{\href{https://github.com/apoorvdarshan/scowld}{scowld}}{Open-source SwiftUI AI companion with a live VRM avatar and camera-based visual awareness.}
+  \resumeProject{\href{https://github.com/apoorvdarshan/verceltics}{verceltics}}{Native iOS application for monitoring Vercel web analytics.}
+  \resumeProject{\href{https://github.com/apoorvdarshan/crossposter}{crossposter}}{Multi-platform publishing tool for X, LinkedIn, Bluesky, Mastodon, Instagram, YouTube, and other services.}
+  \resumeProject{\href{https://github.com/apoorvdarshan/TetherShot}{TetherShot}}{macOS menu-bar utility that captures screenshots from a USB-connected iPhone into a selected folder.}
+  \resumeProject{\href{https://github.com/pulls?q=is\%3Apr+author\%3Aapoorvdarshan+is\%3Amerged}{Open-source contributions}}{Merged fixes across TensorFlow, Flutter, Kubernetes, Svelte, jQuery, Spring Boot, freeCodeCamp, and other widely used projects.}
+\resumeSubHeadingListEnd
+
+\section{Honors}
+\resumeItemListStart
+  \resumeItem{Magna Cum Laude; President's List and Dean's List, University of the People.}
+  \resumeItem{CodeChef Problem Solver Diamond Badge for completing 1,000 programming problems.}
+\resumeItemListEnd
+
+\section{Technical Skills}
+\small
+\textbf{Languages:} JavaScript, TypeScript, Python, Swift, Kotlin, Dart, Java, C, SQL, HTML/CSS \\
+\textbf{Frameworks:} React, Next.js, Node.js, Express, Flutter, SwiftUI, Jetpack Compose, React Query, Tailwind CSS \\
+\textbf{Tools and Platforms:} PostgreSQL, MongoDB, Supabase, Git, GitHub, Docker, Vercel, REST, GraphQL, iOS, Android, macOS, Linux
+
+\end{document}
