@@ -58,7 +58,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - For job outreach, prioritize remote full-time software/product engineering roles.
 - Keep the factual core of each outreach message consistent, but personalize the recipient, company/product observation, and proposed contribution for each founder or contact.
 - Write outreach in a concise, natural, human voice. Keep it short and specific; avoid corporate phrasing, generic compliments, resume dumps, and AI-sounding filler.
-- Attribute the 4K+ download milestone specifically to `fud-ai`; do not describe multiple apps as having 4K+ downloads.
+- Read the current personal resume before drafting outreach, and attribute download and star milestones to their specific apps. Never generalize one app's metrics across multiple apps or reuse stale counts.
 - Both files match the `outreach-*.md` rule in `.gitignore` and must remain private and untracked.
 
 ## Workflow notes (for the agent)
