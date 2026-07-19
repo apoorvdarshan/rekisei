@@ -53,6 +53,10 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Use `outreach-leads.md` as the private working queue for prospects found during cold-outreach research, including founders, CEOs, HR/recruiting contacts, and relevant employees. Record available LinkedIn and X profiles alongside the person, role, and company.
 - Use `outreach-sent.md` as the private archive of people who have already been contacted.
 - When an outreach message is sent, move the person's complete entry from `outreach-leads.md` to `outreach-sent.md` immediately. Do not keep the same person in both files; the sent archive is the duplicate-contact safeguard.
+- For job outreach, prioritize remote full-time software/product engineering roles.
+- Keep the factual core of each outreach message consistent, but personalize the recipient, company/product observation, and proposed contribution for each founder or contact.
+- Write outreach in a concise, natural, human voice. Keep it short and specific; avoid corporate phrasing, generic compliments, resume dumps, and AI-sounding filler.
+- Attribute the 4K+ download milestone specifically to `fud-ai`; do not describe multiple apps as having 4K+ downloads.
 - Both files match the `outreach-*.md` rule in `.gitignore` and must remain private and untracked.
 
 ## Workflow notes (for Claude)
