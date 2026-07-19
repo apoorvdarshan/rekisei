@@ -49,6 +49,12 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Recompile after every change**: `pdflatex resume.tex && open resume.pdf`
 - **Tighten the layout** (user wants it shorter): reduce `\vspace` in `\resumeProjectHeading` or row spacing in honors
 
+## Private outreach tracking
+- Use `outreach-leads.md` as the private working queue for prospects found during cold-outreach research, including founders, CEOs, HR/recruiting contacts, and relevant employees. Record available LinkedIn and X profiles alongside the person, role, and company.
+- Use `outreach-sent.md` as the private archive of people who have already been contacted.
+- When an outreach message is sent, move the person's complete entry from `outreach-leads.md` to `outreach-sent.md` immediately. Do not keep the same person in both files; the sent archive is the duplicate-contact safeguard.
+- Both files match the `outreach-*.md` rule in `.gitignore` and must remain private and untracked.
+
 ## Workflow notes (for Claude)
 - After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
 - After compiling, sync **both** the `.tex` source and the compiled `.pdf` to `~/Documents/` so the canonical current resume — source *and* output — always lives there. Keep the two in sync (recompile, then copy both).
