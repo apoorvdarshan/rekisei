@@ -60,6 +60,8 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Write outreach in a concise, natural, human voice. Keep it short and specific; avoid corporate phrasing, generic compliments, resume dumps, and AI-sounding filler.
 - Read the current personal resume before drafting outreach, and attribute download and star milestones to their specific apps. Never generalize one app's metrics across multiple apps or reuse stale counts.
 - All outreach files match the `outreach-*.md` rule in `.gitignore` and must remain private and untracked.
+- When an outreach round is declared final, leave `outreach-leads.md` empty. The next outreach session must research a completely fresh batch and must not revive anyone from either archive unless the user explicitly requests a retry.
+- Treat “free InMail editor rejected automated text entry” as an in-app-browser tooling failure, not a recipient or account block. If the round is being closed, keep that person in `outreach-discarded.md` with the exact failure reason.
 
 ## Workflow notes (for Claude)
 - After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
