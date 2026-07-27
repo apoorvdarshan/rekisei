@@ -35,7 +35,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Clickable project / open-source name**: wrap the name in `\href{URL}{}` inside the existing `\textbf{}` — e.g. `\textbf{\href{https://github.com/you/repo}{repo}}`. `hyperref` is loaded with `hidelinks`, so the text looks identical in the PDF but is clickable. Use repo (or live-site) URLs for projects, merged-PR URLs for open-source contributions — mirroring the links in the GitHub profile README. Keep every project and OSS name linked; if adding them in bulk, batch it — don't ask one-by-one.
 
 ## Constraints
-- 1–2 pages is the recommended sweet spot, but length is the user's call — don't enforce a cap. If the user wants to tighten the layout: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If they want it to breathe more: loosen those values.
+- 1–2 pages is the recommended sweet spot, but length is the user's call — don't enforce a cap. If the user wants to tighten the layout: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11.4pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If they want it to breathe more: loosen those values.
 - Section headers use `\scshape` (no bold available in OT1/cmr)
 - FontAwesome5 not assumed — `\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{}` for safe fallback; header uses plain text labels
 - ATS-parseable: `\pdfgentounicode=1`
