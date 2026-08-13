@@ -1,6 +1,6 @@
 # Resume — AGENTS.md skill
 
-Drop this folder into Codex (or any agent that reads `AGENTS.md`) to get a live LaTeX resume editor: edit by chatting, recompile + auto-open the PDF on every change, keep the layout clean and concise — 1–2 pages preferred.
+Drop this folder into Codex (or any agent that reads `AGENTS.md`) to get a live LaTeX resume editor: edit by chatting, recompile and visually verify the PDF on every change without opening it in a desktop app, and keep the layout clean and concise — 1–2 pages preferred.
 
 ## Files
 - `resume.tex` — main LaTeX source (sample template, customize freely)
@@ -9,9 +9,9 @@ Drop this folder into Codex (or any agent that reads `AGENTS.md`) to get a live 
 
 ## How to compile
 ```bash
-pdflatex resume.tex
+pdflatex Apoorv_Darshan_Resume.tex
 ```
-Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.pdf` (Windows).
+Render the compiled PDF to images and inspect those images. **Never auto-open the PDF or bring a PDF viewer to the foreground.**
 
 ### Toolchain (one-time setup)
 - macOS: `brew install --cask basictex` then open a new terminal so `/Library/TeX/texbin` lands on PATH
@@ -47,7 +47,7 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - **Update a star count**: find `$\bigstar$ Xk stars` in the relevant line
 - **Add an honor**: add a `\textbf{Title} -- description & Date \\[0pt]` row to the Honors table
 - **Make project / OSS names clickable**: wrap each name in `\href{URL}{}` inside `\textbf{}`. Project names → repo URL; open-source contributions → merged PR URL. For repos with multiple merged PRs, link to `https://github.com/owner/repo/pulls?q=author%3A<username>` so all show up.
-- **Recompile after every change**: `pdflatex resume.tex && open resume.pdf`
+- **Recompile after every change**: `pdflatex Apoorv_Darshan_Resume.tex`, then render and inspect the PDF without opening it in a desktop app
 - **Tighten the layout** (user wants it shorter): reduce `\vspace` in `\resumeProjectHeading` or row spacing in honors
 
 ## Private outreach tracking
@@ -65,11 +65,11 @@ Then `open resume.pdf` (macOS) / `xdg-open resume.pdf` (Linux) / `start resume.p
 - Treat “free InMail editor rejected automated text entry” as an in-app-browser tooling failure, not a recipient or account block. If the round is being closed, keep that person in `outreach-discarded.md` with the exact failure reason.
 
 ## Workflow notes (for the agent)
-- After every edit to `resume.tex`, recompile and open the PDF so the user can visually verify.
+- After every edit to `Apoorv_Darshan_Resume.tex`, recompile, render, and visually verify the PDF without opening it or switching the user's foreground app.
 - After compiling, sync **both** the `.tex` source and the compiled `.pdf` to `~/Documents/` so the canonical current resume — source *and* output — always lives there. Keep the two in sync (recompile, then copy both).
-- If—and only if—the user explicitly asks, finish a resume update by replacing the saved resume in LinkedIn **Jobs → Preferences → Resumes and application data**: delete the old PDF and upload the newly verified current PDF from `~/Documents/`. Never perform this LinkedIn step automatically or infer permission from a general resume-edit request.
+- Whenever profile or resume data is updated, automatically replace the saved resume in LinkedIn **Jobs → Preferences → Resumes and application data** using the newly verified current PDF from `~/Documents/`; do not ask for separate permission.
 - After any structural/formatting change, update this `AGENTS.md` to keep it accurate.
-- Treat `resume.tex` as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting changes.
+- Treat `Apoorv_Darshan_Resume.tex` as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting changes. `resume.tex` is only a sample template.
 - The structure, sections, page count, and formatting above are **recommendations, not rules**. If the user explicitly asks to change the template (drop a section, add one, reorder, switch color theme, ditch the Jake's Resume base entirely, target 3+ pages, etc.) — do it. Their resume, their call.
 
 ## Credits
