@@ -6,7 +6,6 @@ Drop this folder into Codex (or any agent that reads `AGENTS.md`) to get a live 
 - `resume.tex` — main LaTeX source (sample template, customize freely)
 - `resume.pdf` — compiled output (1–2 pages preferred; user's call)
 - `Apoorv_Darshan_Resume.tex` / `.pdf` — full personal resume
-- `Apoorv_Darshan_GeorgiaTech_Resume.tex` / `.pdf` — one-page resume tailored for the Georgia Tech OMSCS application
 
 ## How to compile
 ```bash
