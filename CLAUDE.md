@@ -74,4 +74,4 @@ Render the compiled PDF to images and inspect those images. **Never auto-open th
 
 ## Credits
 LaTeX base: [Jake's Resume](https://github.com/jakegut/resume) (MIT).
-This skill: [rekisei](https://github.com/apoorvdarshan/rekisei).
+This skill: [rekisei](https://github.com/aopv/rekisei).
