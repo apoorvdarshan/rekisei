@@ -8,7 +8,7 @@ Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a ski
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/aopv/rekisei.git
+   git clone https://github.com/apoorvdarshan/rekisei.git
    cd rekisei
    ```
 
