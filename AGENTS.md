@@ -37,6 +37,7 @@ Render the compiled PDF to images and inspect those images. **Never auto-open th
 
 ## Constraints
 - 1–2 pages is the recommended sweet spot, but length is the user's call — don't enforce a cap. If the user wants to tighten the layout: tighten `\vspace` in `\resumeProjectHeading` (e.g. `-11.4pt`), or reduce honors row spacing from `\\[1pt]` → `\\[0pt]`. If they want it to breathe more: loosen those values.
+- Keep the resume header's social and profile links unchanged unless the user explicitly requests a resume-header change. Do not add, remove, reorder, or update social links there as part of profile synchronization; social-link updates belong in the GitHub README and website Connect section.
 - Section headers use `\scshape` (no bold available in OT1/cmr)
 - FontAwesome5 not assumed — `\IfFileExists{fontawesome5.sty}{\usepackage{fontawesome5}}{}` for safe fallback; header uses plain text labels
 - ATS-parseable: `\pdfgentounicode=1`
