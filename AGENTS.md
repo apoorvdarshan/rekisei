@@ -68,7 +68,11 @@ Render the compiled PDF to images and inspect those images. **Never auto-open th
 ## Workflow notes (for the agent)
 - After every edit to `Apoorv_Darshan_Resume.tex`, recompile, render, and visually verify the PDF without opening it or switching the user's foreground app.
 - After compiling, sync **both** the `.tex` source and the compiled `.pdf` to `~/Documents/` so the canonical current resume — source *and* output — always lives there. Keep the two in sync (recompile, then copy both).
-- Also copy the compiled `Apoorv_Darshan_Resume.pdf` to `/Users/apoorvdarshan/profile/public/Apoorv_Darshan_Resume.pdf` (served at https://apoorvdarshan.com/Apoorv_Darshan_Resume.pdf), then commit, push, and deploy the profile site so View/Download stays current. Do **not** upload to LinkedIn.
+- After Documents sync, also publish the resume to GitHub + apoorvdarshan.com:
+  1. Copy the compiled `Apoorv_Darshan_Resume.pdf` to `/Users/apoorvdarshan/profile/public/Apoorv_Darshan_Resume.pdf`.
+  2. Commit, push, and deploy the `profile` site so https://apoorvdarshan.com/resume stays current (short share URL; the file still downloads/views as `Apoorv_Darshan_Resume.pdf`). Keep `/Apoorv_Darshan_Resume.pdf` as a fallback if present.
+  3. Ensure the GitHub profile README (`/Users/apoorvdarshan/apoorvdarshan`) **Resume** section and Connect **Resume** badge still link to `https://apoorvdarshan.com/resume` (do not put the PDF binary in that README repo).
+  Do **not** auto-upload to LinkedIn.
 - After any structural/formatting change, update this `AGENTS.md` to keep it accurate.
 - Treat `Apoorv_Darshan_Resume.tex` as the source of truth for the user's personal data (name, projects, honors, etc.) — read it before suggesting changes. `resume.tex` is only a sample template.
 - The structure, sections, page count, and formatting above are **recommendations, not rules**. If the user explicitly asks to change the template (drop a section, add one, reorder, switch color theme, ditch the Jake's Resume base entirely, target 3+ pages, etc.) — do it. Their resume, their call.
