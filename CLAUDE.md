@@ -65,6 +65,11 @@ Render the compiled PDF to images and inspect those images. **Never auto-open th
 - When an outreach round is declared final, leave `outreach-leads.md` empty. The next outreach session must research a completely fresh batch and must not revive anyone from either archive unless the user explicitly requests a retry.
 - Treat “free InMail editor rejected automated text entry” as an in-app-browser tooling failure, not a recipient or account block. If the round is being closed, keep that person in `outreach-discarded.md` with the exact failure reason.
 
+## Download / star metrics
+
+- ASC pull snapshot: `~/Documents/asc_downloads.json`. Use **first-time** downloads for resume/marketing copy; ignore update-inflated all-events totals (Fud AI ~37K all-events ≠ downloads).
+- **Fud AI 8K+** on resume = ASC first-time (~6K, 2026-09-11) + Play/other. Do not litigate that figure against ASC `total`.
+
 ## Workflow notes (for Claude)
 - After every edit to `Apoorv_Darshan_Resume.tex`, recompile, render, and visually verify the PDF without opening it or switching the user's foreground app.
 - After compiling, sync **both** the `.tex` source and the compiled `.pdf` to `~/Documents/` so the canonical current resume — source *and* output — always lives there. Keep the two in sync (recompile, then copy both).
