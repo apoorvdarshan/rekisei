@@ -68,9 +68,11 @@ Render the compiled PDF to images and inspect those images. **Never auto-open th
 ## Download / star metrics
 
 - Current ASC snapshot: private `~/profile-resume-private/ios-downloads.json`, linked from `~/Documents/asc_downloads.json`. The existing cloud workflow refreshes the six configured iOS app counts once per UTC day before rebuilding the PDF; the normal Mac sync brings them down. Use **first-time** downloads for resume/marketing copy; ignore update-inflated all-events totals (app updates are not new downloads).
-- **Fud AI** on the resume combines ASC lifetime first-time downloads with a separately maintained 2,512 Android installs from the last verified Google Play listing. Follow the generated badge in the GitHub profile; never substitute ASC all-events totals.
+- **Fud AI** on the resume combines ASC lifetime first-time downloads with daily verified Google Play first-time installs from private `~/profile-resume-private/android-downloads.json`. Follow the generated badge in the GitHub profile; never substitute ASC all-events totals.
 
 - Five npm-backed project download labels refresh daily from the public npm download-count API, without a token. The metric includes repeat/CI package downloads, not unique users or GitHub release/Homebrew downloads. Config is `~/profile/scripts/automation/npm-downloads.json`; audited totals are `~/apoorvdarshan/profile-automation/npm-downloads.json`. Keep these labels synchronized through the existing cloud/PDF workflow.
+
+- Android reporting uses a dedicated read-only service account with GitHub OIDC, covering current/future Play Console apps without per-app keys. Discovery remains private; explicitly validate lifetime history/metric and map a production app before publishing its count. Sum Daily User Installs once per overview date; never use the zero-filled legacy Total User Installs column or add device/country dimensions. Preserve old verified counts on failure. See `~/profile/scripts/automation/README.md`.
 
 ## Workflow notes (for the agent)
 - Automated merges/star updates run every six hours in `apoorvdarshan/apoorvdarshan/.github/workflows/refresh-profile.yml`. They reorder OSS by stars, mirror current summaries from the newest 2–3 distinct PR titles for multi-PR repositories, preserve the header and personal-project/commit-credit descriptions, compile with Tectonic, validate, and publish the PDF to the website. Personal source and compiled PDF are stored in the private `~/profile-resume-private` repository, not this public template repository.
