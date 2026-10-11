@@ -22,4 +22,9 @@ jobs:
       - run: python3 scripts/validate-template.py
       - run: mkdir -p /tmp/rekisei-build && pdflatex -no-shell-escape -halt-on-error -interaction=nonstopmode -output-directory=/tmp/rekisei-build resume.tex
       - run: pdftotext /tmp/rekisei-build/resume.pdf /tmp/rekisei-build/resume.txt && python3 scripts/validate-template.py /tmp/rekisei-build/resume.txt
-      - run: chktex -q -n1 -n2 -n3 -n8 -n13 -n24 -n25 -n36 -n44 resume.tex
+      - run: chktex -I0 -q -n1 -n2 -n3 -n8 -n13 -n24 -n25 -n36 -n44 resume.tex
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+        with:
+          name: sample-resume
+          path: /tmp/rekisei-build/resume.pdf
+          retention-days: 7

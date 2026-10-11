@@ -22,3 +22,7 @@ extraction from the compiled sample. ChkTeX checks the template; stylistic rules
 that conflict with intentional resume formatting are disabled in CI.
 No memory-unsafe production implementation or network-facing service is shipped;
 fuzzing a full TeX engine belongs upstream, not in this template project.
+
+ChkTeX uses `-I0` to lint the project template only; upstream TeX inputs such as
+`glyphtounicode` are resolved and checked by the separate pdfLaTeX compile.
+CI uploads the compiled public sample PDF for visual verification.
