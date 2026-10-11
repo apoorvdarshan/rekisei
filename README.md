@@ -2,7 +2,7 @@
 
 A reusable agent skill for editing a **clean, concise LaTeX resume (1–2 pages preferred — your call)** by chatting — works with [Claude Code](https://claude.com/claude-code) and [Codex](https://github.com/openai/codex) via `AGENTS.md`.
 
-Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a skill file that teaches the agent how to add projects, update star counts, manage honors, optionally make project / open-source names clickable (linking to repos and merged PRs), and keep the layout tight — and a workflow that recompiles + auto-opens the PDF after every edit.
+Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a skill file that teaches the agent how to add projects, update star counts, manage honors, optionally make project / open-source names clickable (linking to repos and merged PRs), and keep the layout tight — and a workflow that recompiles + renders and verifies the PDF after every edit.
 
 ## Quick start
 
@@ -26,7 +26,7 @@ Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a ski
    codex    # OpenAI Codex CLI
    ```
 
-4. Edit `resume.tex` directly, or chat with the agent — *"replace the placeholders with my info: name X, email Y, projects A/B/C..."*. After every change the agent will recompile and open the rendered PDF.
+4. Edit `resume.tex` directly, or chat with the agent — *"replace the placeholders with my info: name X, email Y, projects A/B/C..."*. After every change the agent will recompile and inspect the rendered PDF without opening a viewer.
 
 ## What's in the box
 - **`AGENTS.md`** — the skill: instructions for the agent on file structure, formatting patterns, common tasks, and workflow.
@@ -40,3 +40,7 @@ Built on the [Jake's Resume](https://github.com/jakegut/resume) base, plus a ski
 ## License
 
 MIT. LaTeX base from [jakegut/resume](https://github.com/jakegut/resume) (also MIT).
+
+## Repository maintenance
+
+[Build and interfaces](BUILD.md) · [Contributing](CONTRIBUTING.md) · [Security policy](SECURITY.md) · [Changes](CHANGELOG.md)
