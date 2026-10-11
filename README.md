@@ -1,7 +1,7 @@
 # rekisei
 
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/15389/badge)](https://www.bestpractices.dev/projects/15389)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/apoorvdarshan/rekisei/badge)](https://scorecard.dev/viewer/?uri=github.com/apoorvdarshan/rekisei)
+[![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/apoorvdarshan/rekisei?label=openssf%20scorecard&style=flat)](https://scorecard.dev/viewer/?uri=github.com/apoorvdarshan/rekisei)
 
 A reusable agent skill for editing a **clean, concise LaTeX resume (1–2 pages preferred — your call)** by chatting — works with [Claude Code](https://claude.com/claude-code) and [Codex](https://github.com/openai/codex) via `AGENTS.md`.
 
