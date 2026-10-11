@@ -1,0 +1,25 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq texlive-latex-extra texlive-fonts-recommended poppler-utils chktex
+      - run: python3 scripts/validate-template.py
+      - run: mkdir -p /tmp/rekisei-build && pdflatex -no-shell-escape -halt-on-error -interaction=nonstopmode -output-directory=/tmp/rekisei-build resume.tex
+      - run: pdftotext /tmp/rekisei-build/resume.pdf /tmp/rekisei-build/resume.txt && python3 scripts/validate-template.py /tmp/rekisei-build/resume.txt
+      - run: chktex -q -n1 -n2 -n3 -n8 -n13 -n24 -n25 -n36 -n44 resume.tex
