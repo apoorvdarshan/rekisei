@@ -27,3 +27,10 @@ are monitored with Dependabot and CI audits where a package manifest exists.
 Solo-maintainer policy: zero required approving reviews. Do not require code-owner
 approval or last-push approval. Force pushes/deletions are blocked where the GitHub
 plan supports protections. Automated profile commits must remain possible.
+
+## Automated security analysis
+CodeQL scans the Python template validator on pushes, pull requests and weekly.
+CI separately validates the LaTeX source and compiles with shell escape disabled.
+CodeQL does not analyze LaTeX. This template has no application input parser to
+fuzz; no fuzzing integration is claimed. Required reviewer approvals remain zero
+for the sole-maintainer workflow.
