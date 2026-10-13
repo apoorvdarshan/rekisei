@@ -1,3 +1,6 @@
+> **Archived — moved to [apoorvdarshan/apoorvdarshan](https://github.com/apoorvdarshan/apoorvdarshan).**
+> Active development is now in [`resume/template/`](https://github.com/apoorvdarshan/apoorvdarshan/tree/main/resume/template). The GitHub profile, website, and public resume are maintained together there. This repository is retained as a read-only historical archive.
+
 # rekisei
 
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/15389/badge)](https://www.bestpractices.dev/projects/15389)
